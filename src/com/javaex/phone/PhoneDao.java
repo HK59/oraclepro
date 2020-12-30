@@ -115,6 +115,7 @@ public class PhoneDao {
 				pstmt.setString(2,phvo.getHp() );
 				pstmt.setString(3,phvo.getCompany() );
 				pstmt.setInt(4, phvo.getPersonid());
+				System.out.println(query);
 				count = pstmt.executeUpdate(); // update
 
 				// 4.결과처리

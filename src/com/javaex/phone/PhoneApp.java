@@ -49,7 +49,22 @@ public class PhoneApp {
 				System.out.println("[등록되었습니다.]");
 				break;
 			case 3:
+				System.out.println("<3.수정>");
+				System.out.print(">번호:");
+				num = sc.nextInt();
+				System.out.print(">이름:");
+				sc.nextLine(); 
+				name = sc.nextLine();
+				System.out.print(">휴대전화:");
+				hp = sc.nextLine();
+				System.out.print(">회사전화:");
+				company = sc.nextLine();
 				
+				PhoneVo per = new PhoneVo(num,name, hp, company);
+				phoneDao.personUpdate(per);
+				
+				System.out.println("[수정되었습니다.]");
+				break;
 			case 4:
 				System.out.println("<4.삭제>");
 				System.out.print(">번호:");
@@ -59,6 +74,7 @@ public class PhoneApp {
 				
 			case 5:
 				System.out.println("<5.검색>");
+				
 			case 6:
 				System.out.println("******************************************");
 				System.out.println("*               감사합니다               *");
